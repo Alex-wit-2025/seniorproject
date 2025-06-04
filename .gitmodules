@@ -1,0 +1,6 @@
+[submodule "sp-frontend"]
+	path = sp-frontend
+	url = https://github.com/Alex-wit-2025/sp-frontend
+[submodule "sp-backend"]
+	path = sp-backend
+	url = https://github.com/Alex-wit-2025/sp-backend
