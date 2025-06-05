@@ -1,0 +1,11 @@
+services:
+  frontend:
+    build:
+      context: "./sp-frontend"
+  backend:
+    build:
+      context: "./sp-backend"
+      dockerfile: "./sp-backend/Dockerfile"
+    build: mybackend:prod
+
+
