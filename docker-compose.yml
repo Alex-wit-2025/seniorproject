@@ -1,15 +1,20 @@
 services:
   frontend:
+    ports:
+      - "9898:8080"
     build:
       context: "./sp-frontend"
       dockerfile: "./Dockerfile"
   backend:
+    ports:
+      - "3000:3000"
     build:
       context: "./sp-backend"
       dockerfile: "./Dockerfile"
   backend-ws:
+    ports:
+      - "1234:1234"
     build:
-      context: "."
+      context: "./sp-backend"
       dockerfile: "./Dockerfile-ws"
-
 
