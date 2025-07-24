@@ -1,0 +1,18 @@
+# Use a lightweight Node.js base image
+FROM node:20-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Install y-websocket globally
+RUN npm install -g y-websocket
+
+# Expose the port the app runs on
+EXPOSE 1234
+
+# Set environment variables (can also be overridden at runtime)
+ENV HOST=localhost \
+    PORT=1234
+
+# Run the y-websocket server using npx (global install provides the command)
+CMD ["sh", "-c", "HOST=$HOST PORT=$PORT npx y-websocket"]

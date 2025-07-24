@@ -2,10 +2,14 @@ services:
   frontend:
     build:
       context: "./sp-frontend"
+      dockerfile: "./Dockerfile"
   backend:
     build:
       context: "./sp-backend"
-      dockerfile: "./sp-backend/Dockerfile"
-    build: mybackend:prod
+      dockerfile: "./Dockerfile"
+  backend-ws:
+    build:
+      context: "."
+      dockerfile: "./Dockerfile-ws"
 
 
